@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>VENIA</title>
+  </head>
+
+  <body>
+    <div class="app">
+      <!-- HEADER SECTION -->
+      <header class="header">
+        <div class="nav-icon">
+            <i class="fa-solid fa-bars" size="24"></i>
+        </div>
+        <h1 class="logo">VENIA</h1>
+        <ul class="nav">
+          <li class="active">Home</li>
+          <li>Women</li>
+          <li>Men</li>
+          <li>Smart Gear</li>
+          <li>Accessories</li>
+        </ul>
+        <div class="cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span>10</span>
+        </div>
+      </header>
+
+      <!-- MOBILE MENU -->
+      <div class="mobile-nav">
+        <ul>
+          <li>Home</li>
+          <li>Women</li>
+          <li>Men</li>
+          <li>Smart Gear</li>
+          <li>Accessories</li>
+        </ul>
+      </div>
+
+      <!-- BANNER SECTION -->
+      <div class="banner">
+        <div class="banner-heading">
+          <p>Men's</p>
+          <p>Outerwear</p>
+          <div class="blue-bar"></div>
+        </div>
+        <div class="banner-image"></div>
+      </div>
+
+      <!-- HOME SECTION -->
+      <div class="home">
+        <div class="sidebar">
+          <p class="breadcrums">Clothing / Women's / Outerwear</p>
+          <h3>Filters</h3>
+          <div class="separator"></div>
+          <div class="price-filter-container"></div>
+          <div class="separator"></div>
+          <div class="filter-categories">
+            <label>Categories</label>
+          </div>
+          <button class="filter-button">Apply filters</button>
+          <div class="separator"></div>
+        </div>
+        <div class="main">
+          <div class="result-info">
+            <p class="result-count"></p>
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Search products..."
+            />
+            <div class="filter-section">
+                <h5 class="filter-mobile"><i class="fa-solid fa-filter"></i>Filters</h5>
+                <select class="sort-type">
+                    <option value="none">Sort by price</option>
+                    <option value="asc">Low to high</option>
+                    <option value="dec">High to low</option>
+                </select>
+            </div>
+          </div>
+          <div class="product-list"></div>
+          <button class="load-more">Load more</button>
+          <p class="message"></p>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <!-- FOOTER SECTION -->
+      <footer>
+        <div class="footer-links">
+          <div class="footer-section">
+            <h4>Account</h4>
+            <p>Sign In</p>
+            <p>Register</p>
+            <p>Order Status</p>
+          </div>
+          <div class="footer-section">
+            <h4>About Us</h4>
+            <p>Our Story</p>
+            <p>Careers</p>
+          </div>
+          <div class="footer-section">
+            <h4>Help</h4>
+            <p>Contact Us</p>
+            <p>Order Status</p>
+            <p>Returns</p>
+          </div>
+          <div class="footer-section">
+            <h4>Follow Us!</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus
+              nisi nam sunt alias voluptas maiores.
+            </p>
+            <div class="footer-icons">
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-twitter"></i>
+            </div>
+          </div>
+        </div>
+        <div class="separator"></div>
+        <div class="footer-sub">
+          <h3>VENIA</h3>
+          <p>&copy; 2015 RapidTables.com</p>
+          <div class="footer-terms">
+            <p>Term of use</p>
+            <p>Privacy Policy</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="text/javascript" src="./main.js"></script>
+  </body>
+</html>
