@@ -26,16 +26,12 @@ const fetchProducts = async () => {
 
     products = await response.json();
 
-    // Transform the data to match our structure
-    products = products.map((product) => ({
-      id: product.id,
-      title: product.title,
-      price: product.price,
-      image: product.image,
-      category: product.category,
-    }));
+    // Transform the data to match our structure to use in the UI
+    products = products.map((product) => (
+      { id, title, description, price, image, category } = product
+    ));
 
-    // Initial filters
+    // Default filters
     filteredProducts = [...products];
     categories = [...new Set(products.map((product) => product.category))];
     maxPrice = Math.max(...products.map((product) => product.price));
@@ -48,7 +44,7 @@ const fetchProducts = async () => {
     const productList = document.querySelector(".product-list");
     productList.innerHTML = "";
 
-    initializeUI();
+    init();
     renderProducts(currentPage);
   } catch (error) {
     console.error("Error fetching products:", error);
@@ -61,7 +57,7 @@ const fetchProducts = async () => {
   }
 };
 
-const applyFilter = () => {
+const filterProducts = () => {
   const searchTerm = document.querySelector(".search-input").value;
   const maxPriceFilter = document.querySelector(".price-filter").value;
 
@@ -147,7 +143,7 @@ const updateResultCount = () => {
   ).innerHTML = `${filteredProducts.length} Results`;
 };
 
-const initializeUI = () => {
+const init = () => {
   const select = document.querySelector(".filter-categories");
   categories.forEach((category) => {
     const option = document.createElement("div");
@@ -172,7 +168,7 @@ const initializeUI = () => {
 
   document
     .querySelector(".search-input")
-    .addEventListener("input", applyFilter);
+    .addEventListener("input", filterProducts);
 
   document
     .querySelector(".sort-type")
@@ -182,7 +178,7 @@ const initializeUI = () => {
     document.querySelector(".price-value").textContent = parseFloat(
       e.target.value
     ).toFixed(2);
-    applyFilter();
+    filterProducts();
   });
 
   document.querySelector(".filter-button").addEventListener("click", () => {
@@ -193,8 +189,7 @@ const initializeUI = () => {
         filterOption.push(checkboxes[i].value);
       }
     }
-    // console.log(filterOption);
-    applyFilter();
+    filterProducts();
   });
 
   updateResultCount();

@@ -294,7 +294,27 @@ footer {
     display: none;
 }
 
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 699px) {
+    .nav-icon {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+    }
+} */
+
+@media screen and (max-width: 880px ) {
+    .banner-heading {
+        width: 50%;
+    }
+
+    .banner-image {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 699px) {
     body {
       width: 100%;
     }
