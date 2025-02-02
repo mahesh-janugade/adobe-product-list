@@ -294,16 +294,6 @@ footer {
     display: none;
 }
 
-/* @media screen and (max-width: 699px) {
-    .nav-icon {
-        display: block;
-    }
-
-    .nav {
-        display: none;
-    }
-} */
-
 @media screen and (max-width: 880px ) {
     .banner-heading {
         width: 50%;
